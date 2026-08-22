@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colméia — Psicologia das Cores</title>
+  <meta name="description" content="Colméia reúne imagens e conteúdo sobre psicologia das cores: como cada tom influencia emoções, comportamento e percepção.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO ===== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+    <a href="#topo" class="brand">
+      <span class="brand-hex" aria-hidden="true"></span>
+        Colméia
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#favo">O favo</a>
+       <a href="galeria.html">Galeria</a>
+      </nav>
+    </div>
+  </header>
+
+<!-- ===== HERO ===== -->
+<main id="topo">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">psicologia das cores</p>
+        <h1>Cada cor fala <br> antes de qualquer palavra.</h1>
+        <p class="hero-lede">
+          A Colméia guarda imagens e estudos sobre como o vermelho acelera o pulso,
+          o azul acalma a mente e o amarelo prende a atenção — o vocabulário
+          silencioso que molda decisões, ambientes e sentimentos todos os dias.
+        </p>
+        <a class="btn" href="explorarFavo.html">Explorar o favo de cores</a>
+      </div>
+      <div class="hero-comb" aria-hidden="true">
+        <div class="cell c1"></div>
+        <div class="cell c2"></div>
+        <div class="cell c3"></div>
+        <div class="cell c4"></div>
+        <div class="cell c5"></div>
+        <div class="cell c6"></div>
+        <div class="cell c7"></div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ===== O FAVO: SIGNIFICADO DAS CORES ===== -->
+    <section id="favo" class="favo">
+      <div class="wrap">
+        <p class="eyebrow">o favo</p>
+        <h2>Seis células, seis emoções</h2>
+        <p class="section-lede">Passe o olho pelas células abaixo — cada uma guarda o que a ciência e o design já observaram sobre aquela cor.</p>
+
+        <div class="hex-grid">
+          <article class="hex-card" style="--hex-color:#C1121F;">
+            <h3>Vermelho</h3>
+            <p>Eleva a frequência cardíaca e sinaliza urgência — por isso domina promoções, alertas e paixão.</p>
+          </article>
+          <article class="hex-card" style="--hex-color:#1D4E89;">
+            <h3>Azul</h3>
+            <p>Associado a calma e confiança; é a cor mais usada por bancos e marcas que querem transmitir segurança.</p>
+          </article>
+          <article class="hex-card" style="--hex-color:#F2B705;">
+            <h3>Amarelo</h3>
+            <p>Estimula otimismo e capta atenção rápido — mas em excesso pode gerar ansiedade visual.</p>
+          </article>
+          <article class="hex-card" style="--hex-color:#2A9D8F;">
+            <h3>Verde</h3>
+            <p>Remete a equilíbrio e natureza; reduz a fadiga visual e é ligado a crescimento e saúde.</p>
+          </article>
+          <article class="hex-card" style="--hex-color:#6A4C93;">
+            <h3>Roxo</h3>
+            <p>Historicamente ligado à realeza e criatividade; usado para transmitir sofisticação e originalidade.</p>
+          </article>
+          <article class="hex-card" style="--hex-color:#E07A5F;">
+            <h3>Laranja</h3>
+            <p>Mistura a energia do vermelho com o bom humor do amarelo — comum em marcas jovens e acessíveis.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+      <!-- Lightbox: abre a imagem em destaque ao clicar -->
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-fechar" id="lightboxFechar" aria-label="Fechar imagem">&times;</button>
+        <div class="lightbox-conteudo">
+          <div class="lightbox-img" id="lightboxImg"></div>
+          <div class="lightbox-texto">
+            <h3 id="lightboxTitulo"></h3>
+            <p id="lightboxDesc"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== POR QUE IMPORTA ===== -->
+    <section id="sobre" class="sobre">
+      <div class="wrap sobre-grid">
+        <div>
+          <p class="eyebrow">por que importa</p>
+          <h2>Cor não é decoração. É comunicação.</h2>
+          <p>
+            Entender a psicologia das cores ajuda profissionais de design,
+            marketing, saúde e educação a criar ambientes e mensagens mais
+            eficazes — desde a sala de espera de uma clínica até a embalagem
+            de um produto. A Colméia existe para reunir esse conhecimento
+            num só lugar, célula por célula.
+          </p>
+        </div>
+        <ul class="stat-list">
+          <li><span class="stat-num">90s</span> tempo médio que uma pessoa leva para formar uma opinião sobre um produto — a cor responde por boa parte dessa decisão.</li>
+          <li><span class="stat-num">62–90%</span> da avaliação inicial de um produto pode ser baseada só na cor, segundo estudos de marketing visual.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Colméia — psicologia das cores</p>
+      <p class="footer-note">Projeto de estudo e documentação visual.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
