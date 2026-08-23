@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Explorar o favo de cores </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <!-- ===== GALERIA ESTILO PINTEREST ===== -->
+
+    <section id="galeria" class="galeria">
+      <div class="wrap">
+        <p class="eyebrow">galeria</p>
+        <h2>Mural de cores</h2>
+        <p class="section-lede">Clique numa imagem para ampliar, ou filtre por categoria de cor. Troque os blocos abaixo pelas suas próprias fotos quando quiser.</p>
+
+        <div class="filtros" role="tablist" aria-label="Filtrar galeria por cor">
+          <button class="filtro ativo" data-filtro="todas">Todas</button>
+          <button class="filtro" data-filtro="quente">Quentes</button>
+          <button class="filtro" data-filtro="fria">Frias</button>
+          <button class="filtro" data-filtro="neutra">Neutras</button>
+        </div>
+
+        <div class="mural" id="mural">
+          <figure class="pin" data-categoria="quente" style="--pin-color:#C1121F; --pin-h:280px;">
+            <div class="pin-img"></div>
+            <figcaption>
+              <span class="pin-titulo">Vermelho urgente</span>
+              <span class="pin-desc">Sinaliza alerta e paixão</span>
+            </figcaption>
+          </figure>
+
+          <figure class="pin" data-categoria="fria" style="--pin-color:#1D4E89; --pin-h:360px;">
+            <div class="pin-img"></div>
+            <figcaption>
+              <span class="pin-titulo">Azul confiança</span>
+              <span class="pin-desc">Calma e segurança</span>
+            </figcaption>
+          </figure>
+
+          <figure class="pin" data-categoria="quente" style="--pin-color:#F2B705; --pin-h:220px;">
+            <div class="pin-img"></div>
+            <figcaption>
+              <span class="pin-titulo">Amarelo atenção</span>
+              <span class="pin-desc">Otimismo à primeira vista</span>
+            </figcaption>
+          </figure>
+
+          <figure class="pin" data-categoria="fria" style="--pin-color:#2A9D8F; --pin-h:320px;">
+            <div class="pin-img"></div>
+            <figcaption>
+              <span class="pin-titulo">Verde equilíbrio</span>
+              <span class="pin-desc">Natureza e crescimento</span>
+            </figcaption>
+          </figure>
+
+          <figure class="pin" data-categoria="neutra" style="--pin-color:#6A4C93; --pin-h:260px;">
+            <div class="pin-img"></div>
+            <figcaption>
+              <span class="pin-titulo">Roxo criativo</span>
+              <span class="pin-desc">Sofisticação e originalidade</span>
+            </figcaption>
+          </figure>
+
+          <figure class="pin" data-categoria="quente" style="--pin-color:#E07A5F; --pin-h:300px;">
+            <div class="pin-img"></div>
+            <figcaption>
+              <span class="pin-titulo">Laranja energia</span>
+              <span class="pin-desc">Jovialidade e acessibilidade</span>
+            </figcaption>
+          </figure>
+
+          <figure class="pin" data-categoria="neutra" style="--pin-color:#8D8375; --pin-h:240px;">
+            <div class="pin-img"></div>
+            <figcaption>
+              <span class="pin-titulo">Bege discreto</span>
+              <span class="pin-desc">Neutralidade e conforto</span>
+            </figcaption>
+          </figure>
+
+          <figure class="pin" data-categoria="fria" style="--pin-color:#3D5A80; --pin-h:340px;">
+            <div class="pin-img"></div>
+            <figcaption>
+              <span class="pin-titulo">Azul petróleo</span>
+              <span class="pin-desc">Profundidade e foco</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+       <!-- ===== Filtro Paleta de cores ===== -->
+
+  <script>
+  const filtros = document.querySelectorAll('.filtro');
+  const pins = document.querySelectorAll('.pin');
+
+  filtros.forEach(botao => {
+    botao.addEventListener('click', () => {
+      filtros.forEach(b => b.classList.remove('ativo'));
+      botao.classList.add('ativo');
+
+      const alvo = botao.dataset.filtro;
+      pins.forEach(pin => {
+        const mostrar = alvo === 'todas' || pin.dataset.categoria === alvo;
+        pin.style.display = mostrar ? '' : 'none';
+      });
+    });
+  });
+
+</script>
+
+
+</body>
+</html>
